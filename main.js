@@ -11,8 +11,7 @@
 // Tasks: 
 // + a. Create the functionality to add new items to the list
 // + b. Create the functionality to delete items via the button
-// c. Create the functionality to search in the search field
-// (the search should be done letter by letter)
+// + c. Create the functionality to search in the search field (the search should be done letter by letter)
 
 
 
@@ -84,7 +83,7 @@ function addItem(e) {
 
 // b2 Create the deleteItem function and pass in the "e" event 
 function deleteItem(e) {
-    // b3 Use the classList.contains to filter the btn click
+    // b3 Use the classList.contains to filter the click on the btn
     if(e.target.classList.contains('delete')) {
         // b4 Create the simple confirm 
         if(confirm('Are you sure')) {
@@ -98,7 +97,7 @@ function deleteItem(e) {
     }
 }
 
-// c3 Create the filterItems function
+// c3 Create the filterItems function with e passed in 
 function filterItems(e) {
     // c4 Get the text from the input
     inputText = e.target.value;
@@ -108,7 +107,7 @@ function filterItems(e) {
 
     // c6 Grab the li's content for comparison
     // 1. Grab the HTML collection from li's
-    var items = itemsList.getElementsByTagName('li');
+    var items = itemsList.getElementsByTagName('li'); 
 
     // 2. Convert the HTML collection into the array
     // because I can't look through HTML collection elements
@@ -122,7 +121,7 @@ function filterItems(e) {
         // 5. Convert the li's content toLowerCase
         var itemsNamesLower = itemsNames.toLocaleLowerCase();
 
-        // c7 Compare itemsNamesLower with inputTextLowe
+        // c7 Compare itemsNamesLower with inputTextLower
         // 1. Check whether any itemsNamesLower element 
         // contains the inputTextLower by using the 
         // indexOf array method
